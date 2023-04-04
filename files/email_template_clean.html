@@ -1,0 +1,379 @@
+<html>
+    <head>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                background:rgb(28, 36, 51);
+            }
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            }
+            .top-info {
+                width: auto;
+                height: auto;
+                line-height: 20px;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 50px;
+                font-size: 13px;
+                font-weight: 400;
+                color: rgb(90, 110, 145);
+            }
+            .top-info span {
+                color: #0052CC;
+                font-weight: 500;
+            }
+            .outer {
+                margin: 30px;
+                padding: 60px;
+                border-radius: 5px;
+                overflow: auto;
+                background: white;
+                min-height: 800px;
+            }
+            .container {
+                width: 100%; /* calc(100% - 300px) */
+                height: auto;
+                border-radius: 3px;
+                background-color: #ffffff;
+                box-sizing: border-box;
+                float: left;
+            }
+            .top-container {
+                width: auto;
+                height: auto;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 15px;
+                margin-bottom: 30px;
+                background-color: #ffffff;
+                box-sizing: border-box;
+                border-top: 1px solid rgb(228, 231, 236);
+            }
+            .title {
+                font-size: 25px;
+                font-weight: 500;
+                color: rgb(23, 43, 77);
+            }
+            .head {
+                width: auto;
+                height: 16px;
+                margin-bottom: 10px;
+            }
+            .icon {
+                width: 14px;
+                height: 14px;
+                margin-right: 8px;
+                float: left;
+            }
+            .icon-sep {
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                font-size: 13px;
+                font-weight: 500;
+                color: rgb(90, 110, 145);
+                float: left;
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+            .icon-label {
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                font-size: 13px;
+                font-weight: 500;
+                color: rgb(90, 110, 145);
+                float: left;
+            }
+            .label {
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(90, 110, 145);
+                margin-top: 40px;
+            }
+            .status-label {
+                width: 40%;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(90, 110, 145);
+                float: left;
+                margin-right: 10px;
+            }
+            .description {
+                width: auto;
+                height: auto;
+                line-height: 19px;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgb(37, 58, 93);
+                margin-top: 10px;
+            }
+            .status {
+                display: inline-block;
+                width: auto;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 6px;
+                padding-right: 6px;
+                border-radius: 3px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .status-color-1, .status-color-2 {
+                background: rgb(223, 225, 230);
+                color: rgb(23, 43, 77);
+            }
+            .status-color-3 {
+                background: rgb(0, 135, 90);
+                color: white;
+            }
+            .status-color-4 {
+                background: rgb(0, 82, 204);
+                color: white;
+            }
+            .comments {
+                width: auto;
+                height: auto;
+            }
+            .comment {
+                box-sizing: border-box;
+                padding: 20px;
+                background-color: rgb(249, 251, 252);
+                border-radius: 3px;
+                margin-top: 10px;
+            }
+            .comment-head {
+                width: auto;
+                height: 12px;
+                line-height: 12px;
+                font-size: 12px;
+                font-weight: 400;
+                color: rgb(90, 110, 145);
+            }
+            .comment-head span {
+                font-weight: 500;
+                font-size: 13px;
+            }
+            .comment-content {
+                width: auto;
+                line-height: 16px;
+                font-size: 13px;
+                font-weight: 400;
+                color: rgb(37, 58, 93);
+                margin-top: 8px;
+            }
+            .code {
+                font-family: monospace;
+                background-color: rgb(244, 245, 247);
+                border-radius: 4px;
+                padding: 10px;
+                padding-left: 14px;
+                margin-top: 22px;
+                margin-bottom: 22px;
+                font-size: 12px;
+            }
+            .code-line {
+                white-space: pre-wrap;
+            }
+            .sidebar {
+                width: 240px;
+                float: right;
+                box-sizing: border-box;
+                margin-top: 30px;
+            }
+            .sidebar .label {
+                font-size: 12px;
+            }
+            .user {
+                width: auto;
+                height: 20px;
+                line-height: 20px;
+            }
+            .user-image {
+                width: 24px;
+                height: 24px;
+                float: left;
+            }
+            .user-name {
+                width: auto;
+                height: 20px;
+                line-height: 20px;
+                float: left;
+                color: rgb(37, 58, 93);
+                font-size: 14px;
+            }
+            .dates {
+                border-top: 1px solid rgb(228, 231, 236);
+                margin-top: 40px;
+                padding-top: 10px;
+            }
+            .date {
+                color: rgb(117, 135, 167);
+                font-size: 12px;
+                margin-top: 5px;
+            }
+            .status-area {
+                overflow: auto;
+                border: 1px solid rgb(224, 231, 235);
+                border-radius: 4px;
+                padding: 20px;
+                padding-bottom: 10px;
+                margin-top: 30px;
+            }
+            .status-column {
+                width: 45%;
+                float: left;
+                margin-bottom: 10px;
+            }
+            .status-column:nth-child(odd) {
+                margin-right: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="container">
+                <div class="head">
+                    <div class="icon-label"><!--{{ fields.project.name }}-->Project</div>
+                    <!--{{#if fields.parent}}-->
+                    <div class="icon-sep">/</div>
+                    <div class="icon">
+                        <!--<img src="{{ fields.parent.fields.issuetype.iconUrl }}" alt="">-->
+                        <img src="https://vorture.atlassian.net/secure/viewavatar?size=medium&avatarId=10307&avatarType=issuetype" alt="">
+                    </div>
+                    <div class="icon-label"><!--{{ fields.parent.fields.summary }}-->Tasks</div>
+                    <!--{{/if}}-->
+                    <div class="icon-sep">/</div>
+                    <div class="icon">
+                        <!--<img src="{{ fields.issuetype.iconUrl }}" alt="">-->
+                        <img src="https://vorture.atlassian.net/secure/viewavatar?size=medium&avatarId=10318&avatarType=issuetype" alt="">
+                    </div>
+                    <div class="icon-label"><!--{{ key }}-->JEA-13</div>
+                </div>
+                <!-- <div class="title">{{ fields.summary }}</div> -->
+                <div class="title">An example issue task</div>
+
+                <div class="status-area">
+                    <div class="status-column">
+                        <div class="status-label">Status</div>
+                        <div class="status-box">
+                            <div class="status status-color-3">Done</div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Project</div>
+                        <div class="user">
+                            <div class="user-name">Vorture</div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Assignee</div>
+                        <div class="user">
+                            <div class="user-name">Yannick Sacher</div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Reporter</div>
+                        <div class="user">
+                            <div class="user-name">Yannick Sacher</div>
+                        </div>
+                        <!--
+                        <div class="dates">
+                            <div class="date">Created {{formatDate fields.created }}</div>
+                            <div class="date">Updated {{formatDate fields.updated }}</div>
+                        </div>
+                        -->
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Created</div>
+                        <div class="user">
+                            <div class="user-name">May 9, 2020, 9:27 AM</div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Updated</div>
+                        <div class="user">
+                            <div class="user-name">May 9, 2020, 9:27 AM</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="label">Description</div>
+                <div class="description">
+                    <!-- {{#if renderedFields.description}}
+                    {{{ renderedFields.description }}}
+                    {{else}}
+                    No description available
+                    {{/if}} -->
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                    sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                    takimata sanctus est Lorem ipsum dolor sit amet.
+                </div>
+                <div class="label">Comments</div>
+                <!-- {{#if renderedFields.comment.comments.length}}
+                <div class="comments">
+                    {{#each renderedFields.comment.comments}}
+                    <div class="comment">
+                        <div class="comment-head"><span>{{this.author.displayName}}</span> - {{this.created}}</div>
+                        <div class="comment-content">{{{ this.body }}}</div>
+                    </div>
+                    {{/each}}
+                </div>
+                {{else}}
+                <div class="description">
+                    No comments available
+                </div>
+                {{/if}} -->
+                <div class="comments">
+                    <div class="comment">
+                        <div class="comment-head"><span>Yannick</span> - 2021/03/31</div>
+                        <div class="comment-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, sed diam voluptua.</div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-head"><span>Yannick</span> - 2021/03/31</div>
+                        <div class="comment-content">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                            dolore magna aliquyam erat, sed diam voluptua.</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="sidebar">
+                <div class="status status-color-{{ fields.status.statusCategory.id }}">{{ fields.status.name }}</div> 
+                <div class="label">Assignee</div>
+                <div class="user">
+                    {{#if fields.assignee}}
+                    <div class="user-image">
+                        <img width="24" height="24" src="{{ fields.creator.avatarUrls.48x48 }}">
+                    </div>
+                    <div class="user-name">{{ fields.assignee.displayName }}</div>
+                    {{else}}
+                    <div class="user-image">
+                    </div>
+                    <div class="user-name">Unassigned</div>
+                    {{/if}}
+                </div>
+                <div class="label">Reporter</div>
+                <div class="user">
+                    <div class="user-image">
+                        <img width="24" height="24" src="{{ fields.reporter.avatarUrls.48x48 }}">
+                    </div>
+                    <div class="user-name">{{ fields.reporter.displayName }}</div>
+                </div>
+                <div class="dates">
+                    <div class="date">Created {{formatDate fields.created }}</div>
+                    <div class="date">Updated {{formatDate fields.updated }}</div>
+                </div>
+            </div> -->
+        </div>
+    </body>
+</html>

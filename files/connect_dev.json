@@ -1,0 +1,67 @@
+{
+    "name": "Simple PDF Export for Jira",
+    "description": "Export any Jira issue as PDF file with the default Jira issue look.",
+    "key": "simplepdfexport.jira.sourcesprout",
+    "baseUrl": "https://932ujg94j89gj49032ggkk903.dev.sourcesprout.com",
+    "vendor": {
+        "name": "Vorture UG",
+        "url": "http://www.sourcesprout.com"
+    },
+    "scopes": [
+        "READ",
+        "ACT_AS_USER"
+    ],
+    "authentication": {
+        "type": "JWT"
+    },
+    "apiMigrations": {
+        "signed-install": true
+    },
+    "lifecycle": {
+        "installed": "/api/v2/connect/install",
+        "uninstalled": "/api/v2/connect/uninstall"
+    },
+    "apiVersion": 2,
+    "modules": {
+        "webItems": [
+            {
+                "key": "export-pdf-dropdown-link",
+                "location": "operations-top-level",
+                "name": {
+                    "value": "Export PDF"
+                },
+                "weight": 10,
+                "styleClasses": [
+                    "webitem",
+                    "system-present-webitem"
+                ],
+                "context": "addon",
+                "url": "/app/v2",
+                "target": {
+                    "type": "dialog",
+                    "options": {
+                        "height": "750px",
+                        "width": "740px",
+                        "chrome": false
+                    }
+                },
+                "tooltip": {
+                    "value": "Download this issue as PDF file"
+                }
+            }
+        ],
+        "dialogs": [
+            {
+                "key": "export-pdf-module-key",
+                "url": "/app/v2",
+                "options": {
+                    "size": "fullscreen",
+                    "header": {
+                        "value": "Export PDF (DEV)"
+                    }
+                }
+            }
+        ]
+    },
+    "enableLicensing": true
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>[{{ fields.customfield_10336 }}] {{ fields.summary }}</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+    <style type="text/css">
+        * {
+            font-family: sans-serif;
+        }
+        .tableBorder,
+        .grid {
+            background-color: #fff;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tableBorder td,
+        .grid td {
+            vertical-align: top;
+            padding: 2px;
+            border: 1px solid #ccc;
+        }
+
+        .noPadding {
+            padding: 0 !important;
+        }
+
+        h3 .subText {
+            font-size: 60%;
+            font-weight: normal;
+        }
+
+        .tabLabel {
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 2px;
+            display: inline;
+        }
+
+        td {
+            padding: 5px !important;
+            font-size: 14px !important;
+        }
+
+        td.blank {
+            padding: 0;
+            margin: 0;
+        }
+
+        .blank td {
+            border: none;
+        }
+
+        #descriptionArea {
+            margin: 0;
+            padding: 2px;
+            border: 1px solid #ccc;
+        }
+
+        hr {
+            border-top: 1px solid #aaa;
+        }
+
+        hr.fullcontent {
+            height: 15px;
+            padding: 10px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                <h3 class="formtitle">
+                    [{{ fields.customfield_10336 }}]&nbsp;{{ fields.summary }}
+                </h3>
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter's Name:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%">
+                {{ fields.creator.displayName }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Notified to Point of Contact name:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10047 }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Date(s) of Incident:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ fields.created }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Nature of Incident:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10309 }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Incident Assessment:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10265 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Severity Classification:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10197_value }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Assessed by:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10266 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Escalation to Client Required:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10267 }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Resolution(s):</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10278 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Reviewed and Implemented by:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10268 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Date:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10285 }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Root Cause Analysis:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%">
+                {{ values.customfield_10212 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Assessed by:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10270 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Date:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10283 }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Preventive/Disciplinary Action(s):</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%">
+                {{ values.customfield_10272 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Approved by:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10273 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Date:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10282 }}
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Document Reviewed by (Management):</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ values.customfield_10275 }}
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f0f0f0" width="20%">
+                <b>Date:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap width="30%">
+                {{ approval_date }}
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

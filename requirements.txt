@@ -1,0 +1,12 @@
+beautifulsoup4
+django
+sentry-sdk
+django-cors-headers
+jinja2
+atlassian-jwt
+beautifulsoup4
+pyjwt
+pillow
+sentry-sdk
+python-dateutil
+psycopg2-binary

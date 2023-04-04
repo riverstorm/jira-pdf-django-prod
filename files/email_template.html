@@ -1,0 +1,502 @@
+<html>
+    <head>
+        <link href="css/all.css" rel="stylesheet">
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            body {
+                font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            }
+            a {
+                color: #4a71aa;
+            }
+            p {
+                line-height: 22px;
+            }
+            .top-info {
+                width: auto;
+                height: auto;
+                line-height: 20px;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 50px;
+                font-size: 13px;
+                font-weight: 400;
+                color: rgb(90, 110, 145);
+            }
+            .top-info span {
+                color: #0052CC;
+                font-weight: 500;
+            }
+            .outer {
+                margin: 30px;
+                padding-bottom: 90px;
+                border-radius: 5px;
+                overflow: auto;
+                background: white;
+                min-height: 800px;
+            }
+            .container {
+                width: 100%; /* calc(100% - 300px) */
+                height: auto;
+                border-radius: 3px;
+                background-color: #ffffff;
+                box-sizing: border-box;
+                float: left;
+            }
+            .top-container {
+                width: auto;
+                height: auto;
+                margin-left: 50px;
+                margin-right: 50px;
+                margin-top: 15px;
+                margin-bottom: 30px;
+                background-color: #ffffff;
+                box-sizing: border-box;
+                border-top: 1px solid rgb(228, 231, 236);
+            }
+            .title {
+                font-size: 25px;
+                font-weight: 500;
+                color: rgb(23, 43, 77);
+            }
+            .head {
+                width: auto;
+                height: 16px;
+                margin-bottom: 10px;
+            }
+            .icon {
+                width: 14px;
+                height: 14px;
+                margin-right: 8px;
+                float: left;
+            }
+            .icon img {
+                width: 14px;
+                height: 14px;
+            }
+            .icon-sep {
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                font-size: 13px;
+                font-weight: 500;
+                color: rgb(90, 110, 145);
+                float: left;
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+            .icon-label {
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                font-size: 13px;
+                font-weight: 500;
+                color: rgb(90, 110, 145);
+                float: left;
+            }
+            .label {
+                width: auto;
+                height: 16px;
+                line-height: 16px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(90, 110, 145);
+                margin-top: 40px;
+            }
+            .status-label {
+                width: 40%;
+                height: 20px;
+                line-height: 20px;
+                font-size: 14px;
+                font-weight: 600;
+                color: rgb(90, 110, 145);
+                float: left;
+                margin-right: 10px;
+            }
+            .description {
+                width: auto;
+                height: auto;
+                line-height: 19px;
+                font-size: 14px;
+                font-weight: 400;
+                color: rgb(37, 58, 93);
+                margin-top: 10px;
+                padding-bottom: 10px;
+            }
+            .description img {
+                max-width: 50%;
+                max-height: 300px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            .status {
+                display: inline-block;
+                width: auto;
+                height: 20px;
+                line-height: 20px;
+                padding-left: 6px;
+                padding-right: 6px;
+                border-radius: 3px;
+                font-size: 12px;
+                font-weight: 500;
+            }
+            .status-color-1, .status-color-2 {
+                background: rgb(223, 225, 230);
+                color: rgb(23, 43, 77);
+            }
+            .status-color-3 {
+                background: rgb(0, 135, 90);
+                color: white;
+            }
+            .status-color-4 {
+                background: rgb(0, 82, 204);
+                color: white;
+            }
+            .comments {
+                width: auto;
+                height: auto;
+            }
+            .comment {
+                box-sizing: border-box;
+                padding: 20px;
+                background-color: rgb(249, 251, 252);
+                border-radius: 3px;
+                margin-top: 10px;
+            }
+            .comment-head {
+                width: auto;
+                height: 12px;
+                line-height: 12px;
+                font-size: 12px;
+                font-weight: 400;
+                color: rgb(90, 110, 145);
+            }
+            .comment-head span {
+                font-weight: 500;
+                font-size: 13px;
+            }
+            .comment-content {
+                width: auto;
+                line-height: 16px;
+                font-size: 13px;
+                font-weight: 400;
+                color: rgb(37, 58, 93);
+                margin-top: 8px;
+            }
+            .code {
+                font-family: monospace;
+                background-color: rgb(244, 245, 247);
+                border-radius: 4px;
+                padding: 10px;
+                padding-left: 14px;
+                margin-top: 22px;
+                margin-bottom: 22px;
+                font-size: 12px;
+            }
+            .code-line {
+                white-space: pre-wrap;
+            }
+            .sidebar {
+                width: 240px;
+                float: right;
+                box-sizing: border-box;
+                margin-top: 30px;
+            }
+            .sidebar .label {
+                font-size: 12px;
+            }
+            .user {
+                width: auto;
+                height: 20px;
+                line-height: 20px;
+            }
+            .user-image {
+                width: 24px;
+                height: 24px;
+                float: left;
+            }
+            .user-name {
+                width: auto;
+                height: 20px;
+                line-height: 20px;
+                float: left;
+                color: rgb(37, 58, 93);
+                font-size: 14px;
+            }
+            .dates {
+                border-top: 1px solid rgb(228, 231, 236);
+                margin-top: 40px;
+                padding-top: 10px;
+            }
+            .date {
+                color: rgb(117, 135, 167);
+                font-size: 12px;
+                margin-top: 5px;
+            }
+            .status-area {
+                overflow: auto;
+                margin-top: 40px;
+            }
+            .status-column {
+                width: 45%;
+                float: left;
+                margin-bottom: 10px;
+            }
+            .status-column:nth-child(odd) {
+                margin-right: 10%;
+            }
+            .attachment-area {
+                margin-top: 12px;
+                overflow: auto;
+            }
+            .attachment {
+                width: 23%;
+                border-radius: 4px;
+                background-color: rgb(249, 251, 252);
+                float: left;
+                margin-right: 2.66%;
+                margin-bottom: 15px;
+            }
+            .attachment:nth-child(4n+4) {
+                margin-right: 0;
+            }
+            .attachment-preview {
+                height: 125px;
+                line-height: 125px;
+                font-weight: 600;
+                font-size: 18px;
+                color: rgb(79, 93, 116);
+                text-align: center;
+                text-transform: uppercase;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            .attachment-name {
+                width: calc(100% - 48px);
+                font-weight: 500;
+                font-size: 11px;
+                color: rgb(42, 54, 75);
+                padding: 6px;
+                padding-bottom: 0px;
+                float: left;
+            }
+            .attachment-date {
+                width: calc(100% - 48px);
+                font-size: 10px;
+                color: rgb(90, 110, 145);
+                padding: 6px;
+                padding-top: 0px;
+                float: left;
+            }
+            .attachment-link {
+                width: 22px;
+                height: 20px;
+                line-height: 30px;
+                color: rgba(42, 54, 75, 0.45);
+                float: right;
+                margin-top: 7px;
+                padding: 5px;
+                margin-right: 4px;
+                text-align: center;
+            }
+            .attachment-link:hover {
+                color: rgba(42, 54, 75, 0.55);
+            }
+            .img-link {
+                width: 22px;
+                height: 20px;
+                line-height: 30px;
+                color: rgba(42, 54, 75, 0.35);
+                position: absolute;
+                text-align: center;
+                margin-top: 25px;
+                margin-left: 5px;
+            }
+            .img-link:hover {
+                color: rgba(42, 54, 75, 0.45);
+            }
+            .image {
+                margin-top: 12px;
+                border-radius: 4px;
+                background-color: rgb(249, 251, 252);
+            }
+            .image img {
+                width: 100%;
+            }
+            .image-name {
+                font-weight: 500;
+                font-size: 11px;
+                color: rgb(42, 54, 75);
+                padding: 6px;
+                padding-bottom: 0px;
+            }
+            .image-date {
+                font-size: 10px;
+                color: rgb(90, 110, 145);
+                padding: 6px;
+                padding-top: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="container">
+                {% if settings.issuePath %}
+                <div class="head">
+                    <div class="icon-label">{{ fields.project.name }}</div>
+                    {% if fields.parent %}
+                    <div class="icon-sep">/</div>
+                    <div class="icon">
+                        <img src="{{ fields.parent.fields.issuetype.iconUrl }}" alt="">
+                    </div>
+                    <div class="icon-label">{{ fields.parent.fields.summary }}</div>
+                    {% endif %}
+                    <div class="icon-sep">/</div>
+                    <div class="icon">
+                        <img src="{{ fields.issuetype.iconUrl }}" alt="">
+                    </div>
+                    <div class="icon-label">{{ key }}</div>
+                </div>
+                {% endif %}
+                {% if settings.title %}
+                <div class="title">{{ fields.summary }}</div>
+                {% endif %}
+
+                <div class="status-area">
+                    {% if settings.status %}
+                    <div class="status-column">
+                        <div class="status-label">Status</div>
+                        <div class="status-box">
+                            <div class="status status-color-{{ fields.status.statusCategory.id }}">{{ fields.status.name }}</div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Project</div>
+                        <div class="user">
+                            <div class="user-name" style="text-transform:capitalize;">{{ project_name }}</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if settings.users %}
+                    <div class="status-column">
+                        <div class="status-label">Assignee</div>
+                        <div class="user">
+                            <div class="user-name">
+                                {% if fields.assignee.displayName %}
+                                {{ fields.assignee.displayName }}
+                                {% else %}
+                                Unassigned
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Reporter</div>
+                        <div class="user">
+                            <div class="user-name">
+                                {% if fields.reporter.displayName %}
+                                {{ fields.reporter.displayName }}
+                                {% else %}
+                                Unassigned
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% if settings.status %}
+                    <div class="status-column">
+                        <div class="status-label">Created</div>
+                        <div class="user">
+                            <div class="user-name">{{ created_dt.strftime('%b %d %Y, %I:%M %p') }}</div>
+                        </div>
+                    </div>
+                    <div class="status-column">
+                        <div class="status-label">Updated</div>
+                        <div class="user">
+                            <div class="user-name">{{ updated_dt.strftime('%b %d %Y, %I:%M %p') }}</div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% if settings.description %}
+                <div class="label">Description</div>
+                <div class="description">
+                    {% if renderedFields.description %}
+                    {{ renderedFields.description|safe }}
+                    {% else %}
+                    No description available
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% if settings.images %}
+                <div class="label">Images ({{ images|length }})</div>
+                {% for this in images %}
+                <div class="image">
+                    <img src="{{ this.image }}">
+                    {% if settings.attachmentsLinks %}
+                    <a href="{{ this.url }}" class="attachment-link">
+                        <svg width='15px' height='15px' xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Open</title><path d='M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/></svg>
+                    </a>
+                    {% endif %}
+                    <div class="image-name">{{ this.name }}</div>
+                    <div class="image-date">{{ this.date }}</div>
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% if settings.attachments %}
+                <div class="label">Attachments ({{ attachments|length }})</div>
+                <div class="attachment-area">
+                    {% for this in attachments %}
+                    <div class="attachment">
+                        {% if this.image %}
+                        <div
+                            class="attachment-preview"
+                            style="background-image: url({{ this.image }});"
+                        >
+                        </div>
+                        {% else %}
+                        <div
+                            class="attachment-preview"
+                        >
+                            {{ this.type }}
+                        </div>
+                        {% endif %}
+                        {% if settings.attachmentsLinks %}
+                        <a href="{{ this.url }}" class="attachment-link">
+                            <svg width='15px' height='15px' xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Open</title><path d='M384 224v184a40 40 0 01-40 40H104a40 40 0 01-40-40V168a40 40 0 0140-40h167.48M336 64h112v112M224 288L440 72' fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='32'/></svg>
+                        </a>
+                        {% endif %}
+                        <div class="attachment-name">{{ this.name }}</div>
+                        <div class="attachment-date">{{ this.date }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if settings.comments %}
+                <div class="label">Comments</div>
+                {% if renderedFields.comment.comments|length > 0 %}
+                <div class="comments">
+                    {% for this in renderedFields.comment.comments %}
+                    <div class="comment">
+                        <div class="comment-head"><span>{{ this.author.displayName }}</span> - {{ this.created }}</div>
+                        <div class="comment-content">{{ this.body|safe }}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="description">
+                    No comments available
+                </div>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </body>
+</html>

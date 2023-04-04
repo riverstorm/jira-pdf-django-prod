@@ -1,0 +1,13 @@
+data/
+.venv/
+venv/
+__pycache__/
+*.log
+.cache/
+.mypy_cache/
+.idea
+Pipfile.lock
+**/migrations/*.py
+!**/migrations/__init__.py
+
+db.sqlite3
