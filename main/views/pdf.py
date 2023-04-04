@@ -422,7 +422,7 @@ def attach_image_info(issue, images, access_token):
     for i in ordered_images:
         if i['image'] == None:
             for r in result_images:
-                if i['content'] == r['content']:
+                if i['url'] == r['content']:
                     i['image'] = r['image']
 
     return ordered_images
