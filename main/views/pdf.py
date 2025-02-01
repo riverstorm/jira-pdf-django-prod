@@ -378,6 +378,12 @@ def attach_image_info(issue, images, access_token):
             part = i['src'].split('attachment/')[1]
             part = part.split('/')[0]
             src = i['src'].replace(part + '_', '')
+            if "/api/3/" in src:
+                src = src.replace("/api/3/", "/api/2/")
+
+            if "/thumbnail" in src:
+                src = src.replace("/thumbnail", "/content")
+
             if src in a['content']:
                 i['url'] = a['content']
                 if len(a['filename'].split('.')[0]) >= 80:
@@ -526,7 +532,7 @@ def generate_pdf(request, client, claims, user):
 
         after_build = math.ceil((datetime.datetime.now() - start_time).total_seconds())
 
-        logging.error('Start building pdf')
+        logging.error('Start building pdf (test)')
         # Migrate HTML to PDF
         pdf_file = get_pdf(client, claims, html)
         logging.error('Finish building pdf')
